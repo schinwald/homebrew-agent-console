@@ -23,19 +23,36 @@ runtime, and owns the backend `brew services` configuration.
 
 ```bash
 brew tap OWNER/agent-console
-brew install OWNER/agent-console/agent-console-backend
 brew install OWNER/agent-console/agent-console
 brew services start agent-console-backend
 ```
 
+`agent-console` depends on `agent-console-backend`, so one install command provides
+both the frontend CLI and backend hook runtime. Starting the backend service remains
+an explicit user action.
+
+## Release artifact layout
+
+Each versioned macOS release supplies these architecture-specific archives:
+
+```text
+agent-console-darwin-{arm64,x86_64}.tar.gz
+└── agent-console
+
+agent-console-backend-darwin-{arm64,x86_64}.tar.gz
+└── libexec/
+    ├── agent-console-backend
+    └── agent-console-backend-tmux-hook
+```
+
 Formula URLs and checksums remain placeholders until Agent Console publishes
-versioned release artifacts. Replace `OWNER`, release URLs, and checksums when
-creating the first release formula.
+these artifacts. Replace `OWNER`, release URLs, and checksums when creating the
+first release formula.
 
 ## Local validation
 
 ```bash
-brew audit --new-formula Formula/agent-console.rb
-brew audit --new-formula Formula/agent-console-backend.rb
+brew audit --new Formula/agent-console.rb
+brew audit --new Formula/agent-console-backend.rb
 brew style Formula/agent-console.rb Formula/agent-console-backend.rb
 ```

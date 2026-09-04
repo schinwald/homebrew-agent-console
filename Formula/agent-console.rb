@@ -4,6 +4,8 @@ class AgentConsole < Formula
   version "0.1.0"
   license "MIT"
 
+  depends_on "agent-console-backend"
+
   # Replace these release URLs and checksums when Agent Console publishes
   # versioned macOS artifacts.
   on_arm do
@@ -18,8 +20,6 @@ class AgentConsole < Formula
 
   def install
     bin.install "agent-console"
-    libexec.install Dir["libexec/*"] if Dir.exist?("libexec")
-    share.install "share/agent-console" if Dir.exist?("share/agent-console")
   end
 
   test do

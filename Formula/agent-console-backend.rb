@@ -17,8 +17,8 @@ class AgentConsoleBackend < Formula
   end
 
   def install
-    libexec.install Dir["libexec/*"]
-    share.install "share/agent-console" if Dir.exist?("share/agent-console")
+    libexec.install "libexec/agent-console-backend"
+    libexec.install "libexec/agent-console-backend-tmux-hook"
   end
 
   service do
@@ -30,7 +30,7 @@ class AgentConsoleBackend < Formula
   end
 
   test do
-    assert_predicate libexec/"agent-console-backend", :exist?
-    assert_predicate libexec/"agent-console-backend-tmux-hook", :exist? if (libexec/"agent-console-backend-tmux-hook").exist?
+    assert_predicate libexec/"agent-console-backend", :executable?
+    assert_predicate libexec/"agent-console-backend-tmux-hook", :executable?
   end
 end
