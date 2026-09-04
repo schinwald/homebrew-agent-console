@@ -10,6 +10,7 @@ class AgentConsole < Formula
   license "MIT"
 
   depends_on "agent-console-backend"
+  depends_on :macos
 
   def install
     arch = Hardware::CPU.arm? ? "arm64" : "x86_64"

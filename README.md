@@ -53,9 +53,17 @@ Formula URLs and checksums remain placeholders until Agent Console publishes
 these artifacts. Replace `OWNER`, release URLs, and checksums when creating the
 first release formula.
 
-## Local validation
+## Validation
+
+After tapping or publishing the repository, audit its formula names through the tap:
 
 ```bash
-brew audit --strict agent-console agent-console-backend
+brew audit --new --strict OWNER/agent-console/agent-console
+brew audit --new --strict OWNER/agent-console/agent-console-backend
+```
+
+From a local checkout, run style checks directly on the formula files:
+
+```bash
 brew style Formula/agent-console.rb Formula/agent-console-backend.rb
 ```

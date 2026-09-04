@@ -9,6 +9,8 @@ class AgentConsoleBackend < Formula
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
   license "MIT"
 
+  depends_on :macos
+
   def install
     arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
     libexec.install "libexec/agent-console-backend-#{arch}" => "agent-console-backend"
