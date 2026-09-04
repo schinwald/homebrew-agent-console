@@ -3,7 +3,6 @@ class AgentConsole < Formula
   homepage "https://github.com/schinwald/agent-console"
 
   url "https://github.com/schinwald/agent-console/releases/download/v0.1.0/agent-console-darwin-universal.tar.gz"
-  version "0.1.0"
   sha256 "46346120ad8e55794ccf12ce3b2a20acbe6f58caf82359ce979fc1b75429c84b"
   license "MIT"
 
