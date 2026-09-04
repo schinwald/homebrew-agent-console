@@ -33,16 +33,20 @@ an explicit user action.
 
 ## Release artifact layout
 
-Each versioned macOS release supplies these architecture-specific archives:
+Each versioned macOS release supplies these universal archives, each containing
+both Apple Silicon and Intel executables:
 
 ```text
-agent-console-darwin-{arm64,x86_64}.tar.gz
-└── agent-console
+agent-console-darwin-universal.tar.gz
+├── agent-console-arm64
+└── agent-console-x86_64
 
-agent-console-backend-darwin-{arm64,x86_64}.tar.gz
+agent-console-backend-darwin-universal.tar.gz
 └── libexec/
-    ├── agent-console-backend
-    └── agent-console-backend-tmux-hook
+    ├── agent-console-backend-arm64
+    ├── agent-console-backend-x86_64
+    ├── agent-console-backend-tmux-hook-arm64
+    └── agent-console-backend-tmux-hook-x86_64
 ```
 
 Formula URLs and checksums remain placeholders until Agent Console publishes
@@ -52,7 +56,6 @@ first release formula.
 ## Local validation
 
 ```bash
-brew audit --new Formula/agent-console.rb
-brew audit --new Formula/agent-console-backend.rb
+brew audit --strict agent-console agent-console-backend
 brew style Formula/agent-console.rb Formula/agent-console-backend.rb
 ```

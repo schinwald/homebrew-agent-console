@@ -1,24 +1,18 @@
 class AgentConsoleBackend < Formula
   desc "Backend daemon for Agent Console"
   homepage "https://github.com/OWNER/agent-console"
+
+  # Replace this release URL and checksum when Agent Console publishes
+  # a versioned universal macOS artifact.
+  url "https://github.com/OWNER/agent-console/releases/download/v0.1.0/agent-console-backend-darwin-universal.tar.gz"
   version "0.1.0"
+  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
   license "MIT"
 
-  # Replace these release URLs and checksums when Agent Console publishes
-  # versioned macOS artifacts.
-  on_arm do
-    url "https://github.com/OWNER/agent-console/releases/download/v0.1.0/agent-console-backend-darwin-arm64.tar.gz"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-  end
-
-  on_intel do
-    url "https://github.com/OWNER/agent-console/releases/download/v0.1.0/agent-console-backend-darwin-x86_64.tar.gz"
-    sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-  end
-
   def install
-    libexec.install "libexec/agent-console-backend"
-    libexec.install "libexec/agent-console-backend-tmux-hook"
+    arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
+    libexec.install "libexec/agent-console-backend-#{arch}" => "agent-console-backend"
+    libexec.install "libexec/agent-console-backend-tmux-hook-#{arch}" => "agent-console-backend-tmux-hook"
   end
 
   service do
