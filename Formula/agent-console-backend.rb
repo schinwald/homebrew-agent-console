@@ -16,6 +16,7 @@ class AgentConsoleBackend < Formula
 
   service do
     run [opt_libexec/"agent-console-backend"]
+    environment_variables PATH: std_service_path_env
     keep_alive true
     working_dir HOMEBREW_PREFIX
     log_path var/"log/agent-console-backend.log"
