@@ -1,12 +1,10 @@
 class AgentConsole < Formula
   desc "Frontend CLI for Agent Console"
-  homepage "https://github.com/OWNER/agent-console"
+  homepage "https://github.com/schinwald/agent-console"
 
-  # Replace this release URL and checksum when Agent Console publishes
-  # a versioned universal macOS artifact.
-  url "https://github.com/OWNER/agent-console/releases/download/v0.1.0/agent-console-darwin-universal.tar.gz"
+  url "https://github.com/schinwald/agent-console/releases/download/v0.1.0/agent-console-darwin-universal.tar.gz"
   version "0.1.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "46346120ad8e55794ccf12ce3b2a20acbe6f58caf82359ce979fc1b75429c84b"
   license "MIT"
 
   depends_on "agent-console-backend"

@@ -22,8 +22,8 @@ runtime, and owns the backend `brew services` configuration.
 ## Usage after publishing
 
 ```bash
-brew tap OWNER/agent-console
-brew install OWNER/agent-console/agent-console
+brew tap schinwald/agent-console
+brew install schinwald/agent-console/agent-console
 brew services start agent-console-backend
 ```
 
@@ -49,17 +49,16 @@ agent-console-backend-darwin-universal.tar.gz
     └── agent-console-backend-tmux-hook-x86_64
 ```
 
-Formula URLs and checksums remain placeholders until Agent Console publishes
-these artifacts. Replace `OWNER`, release URLs, and checksums when creating the
-first release formula.
+Formula URLs and checksums are pinned to the published Agent Console `v0.1.0`
+release.
 
 ## Validation
 
 After tapping or publishing the repository, audit its formula names through the tap:
 
 ```bash
-brew audit --new --strict OWNER/agent-console/agent-console
-brew audit --new --strict OWNER/agent-console/agent-console-backend
+brew audit --new --strict schinwald/agent-console/agent-console
+brew audit --new --strict schinwald/agent-console/agent-console-backend
 ```
 
 From a local checkout, run style checks directly on the formula files:
