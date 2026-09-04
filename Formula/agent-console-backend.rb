@@ -10,8 +10,8 @@ class AgentConsoleBackend < Formula
 
   def install
     arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
-    libexec.install "libexec/agent-console-backend-#{arch}" => "agent-console-backend"
-    libexec.install "libexec/agent-console-backend-tmux-hook-#{arch}" => "agent-console-backend-tmux-hook"
+    libexec.install "libexec/agent-console-backend-darwin-#{arch}" => "agent-console-backend"
+    libexec.install "libexec/agent-console-backend-tmux-hook-darwin-#{arch}" => "agent-console-backend-tmux-hook"
   end
 
   service do

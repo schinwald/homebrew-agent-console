@@ -38,15 +38,16 @@ both Apple Silicon and Intel executables:
 
 ```text
 agent-console-darwin-universal.tar.gz
-├── agent-console-arm64
-└── agent-console-x86_64
+└── bin/
+    ├── agent-console-darwin-arm64
+    └── agent-console-darwin-x86_64
 
 agent-console-backend-darwin-universal.tar.gz
 └── libexec/
-    ├── agent-console-backend-arm64
-    ├── agent-console-backend-x86_64
-    ├── agent-console-backend-tmux-hook-arm64
-    └── agent-console-backend-tmux-hook-x86_64
+    ├── agent-console-backend-darwin-arm64
+    ├── agent-console-backend-darwin-x86_64
+    ├── agent-console-backend-tmux-hook-darwin-arm64
+    └── agent-console-backend-tmux-hook-darwin-x86_64
 ```
 
 Formula URLs and checksums are pinned to the published Agent Console `v0.1.0`

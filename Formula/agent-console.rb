@@ -11,7 +11,7 @@ class AgentConsole < Formula
 
   def install
     arch = Hardware::CPU.arm? ? "arm64" : "x86_64"
-    bin.install "agent-console-#{arch}" => "agent-console"
+    bin.install "bin/agent-console-darwin-#{arch}" => "agent-console"
   end
 
   test do
