@@ -16,7 +16,7 @@ class AgentConsoleBackend < Formula
 
   service do
     run [opt_libexec/"agent-console-backend"]
-    environment_variables PATH: std_service_path_env,
+    environment_variables PATH:                      std_service_path_env,
                           AGENT_CONSOLE_TMUX_SOCKET: "/private/tmp/tmux-#{Process.uid}/default"
     keep_alive true
     working_dir HOMEBREW_PREFIX
