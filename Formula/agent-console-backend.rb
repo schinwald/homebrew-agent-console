@@ -2,8 +2,8 @@ class AgentConsoleBackend < Formula
   desc "Backend daemon for Agent Console"
   homepage "https://github.com/schinwald/agent-console"
 
-  url "https://github.com/schinwald/agent-console/releases/download/v0.1.1/agent-console-backend-darwin-universal.tar.gz"
-  sha256 "a63172db360a26c06171bf21c59bff14495eab4946078c1ae1d3b1708d5896c9"
+  url "https://github.com/schinwald/agent-console/releases/download/v0.1.2/agent-console-backend-darwin-universal.tar.gz"
+  sha256 "ff5345ca2a15eecf8824926e8e14bba1a9307886d371634e9924b0f7b6986740"
   license "MIT"
 
   depends_on :macos
