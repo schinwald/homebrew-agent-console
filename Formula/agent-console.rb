@@ -2,8 +2,8 @@ class AgentConsole < Formula
   desc "Frontend CLI for Agent Console"
   homepage "https://github.com/schinwald/agent-console"
 
-  url "https://github.com/schinwald/agent-console/releases/download/v0.1.11/agent-console-darwin-universal.tar.gz"
-  sha256 "cb6e0e0f9f0107dd7fa3865a1f26b0c7d5ce64c976eb3aee56c5b66780df22ce"
+  url "https://github.com/schinwald/agent-console/releases/download/v0.1.12/agent-console-darwin-universal.tar.gz"
+  sha256 "6207e0ae44776186f1b01aa6e88a8587fb66c0e9f8bcf102e5d7aa9e9ed89769"
   license "MIT"
 
   depends_on "agent-console-backend"
